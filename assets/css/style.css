@@ -256,6 +256,11 @@ body{
     .hero-section {
         height: 70vh;
     }
+    .hero-background{
+        height: 100%;
+        object-fit:fill;
+        width: 100vw;
+    }
 }
 
 @media screen and (max-width: 400px) {
