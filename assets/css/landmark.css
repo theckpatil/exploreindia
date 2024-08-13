@@ -1,3 +1,31 @@
+.section-title{
+    font-size: 2.5rem;
+    color: rgb(18, 36, 140);
+    text-align: center;
+    margin-bottom: 50px;
+    transform: translateY(30px)
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: green;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+.section-title::before{
+    content: '';
+    display: block;
+    width: 150px;
+    height: 3px;
+    background-color: orangered;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+.section-title::selection{
+    background-color: #ffffff;
+}
 .landmark-section{
     padding: 100px 5%;
     padding-bottom: 0;
@@ -9,13 +37,14 @@
     display: flex;
     justify-content:space-around;
     flex-wrap: wrap;
-    gap:30px;
+    row-gap: 30px;
+    column-gap: 20px;
     position: relative;
     z-index: 1;
 }
 
 .landmark-card{
-    width: calc(30% - 20px);
+    width: calc(25% - 20px);
     background-color: #ffffff;
     border-radius: 15px;
     overflow: hidden;
@@ -24,12 +53,12 @@
 }
 
 .landmark-card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.02);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .landmark-image{
-    height: 250px;
+    height: 200px;
     overflow: hidden;
     position: relative;
 }
@@ -43,29 +72,6 @@
 
 .landmark-card:hover .landmark-image img {
     transform: scale(1.1);
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(181, 53, 3, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.landmark-card:hover .overlay {
-    opacity: 1;
-}
-
-.overlay i {
-    color:#ffffff;
-    font-size: 3.5rem;
 }
 
 .landmark-content{
