@@ -29,6 +29,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #ffffff;
 }
 
 .hero-section {
@@ -36,10 +37,18 @@ body{
     position: relative;
     overflow: hidden;
 }
+.hero-bg-section{
+    height: 85vh;
+    width: calc(100% - 100px);
+    margin: 0 50px ;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+}
 .hero-background{
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height:100%;
+    object-fit: fill;
     position:absolute;
     top: 0;
     left: 0;
@@ -139,18 +148,13 @@ body{
 }
 
 @media (max-width: 768px) {
+    .hero-bg-section{
+        height: 68vh;
+    }
     .title {
-        font-size: 3.7rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        font-size: 2rem;
     }
-    
-    .subtitle {
-        font-size: 1.3rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    
+        
     .cta-button {
         padding: 0.8rem 2rem;
     }
@@ -236,42 +240,34 @@ body{
     .hero-background{
         height: 100%;
         object-fit:fill;
-        width: 100vw;
     }
 }
 
 @media (max-width: 480px) {
+    .hero-bg-section{
+        height: 40vh;
+    }
     .title {
-        font-size: 2.8rem;
+        font-size: 1rem;
     }
 
-    .subtitle {
-        font-size: 1.1rem;
-    }
-
-    .cta-button {
+     .cta-button {
         padding: 0.7rem 1.7rem;
     }
 
     .hero-section {
-        height: 70vh;
+        height: 52vh;
     }
     .hero-background{
         height: 100%;
         object-fit:fill;
-        width: 100vw;
     }
 }
 
 @media screen and (max-width: 400px) {
     .title {
-        font-size: 2.5rem;
+        font-size: 0.5rem;
     }
-
-    .subtitle {
-        font-size: 1rem;
-    }
-
     .cta-button {
         padding: 0.6rem 1.5rem;
     }
