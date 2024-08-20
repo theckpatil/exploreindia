@@ -187,7 +187,7 @@ body{
         border-top: 1px solid #eaeaea;
         padding: 1rem 0;
         opacity: 0;
-        transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+        transition: opacity 0.3s ease, transform 0.3s ease;
         transform: translateY(-10px);
     }
     
@@ -219,8 +219,9 @@ body{
         width: 25px;
         height: 3px;
         margin-bottom: 5px;
-        background-color: #005f56;
+        background-color: orangered;
         transition: all 0.3s ease;
+        border-radius: 5px;
     }
     
     .nav-toggle.active span:nth-child(1) {
@@ -238,10 +239,6 @@ body{
     .hero-content {
         z-index: 1;
         transition: opacity 0.3s ease;
-    }
-
-    .hero-content.dimmed {
-        filter: opacity(0.3);
     }
 
     .hero-section {
