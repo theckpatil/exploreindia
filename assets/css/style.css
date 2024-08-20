@@ -156,9 +156,6 @@ body{
 @media (max-width: 870px) {
     .hero-bg-section{
         height: 68vh;
-        margin: 0 ;
-        border-radius: 0;
-        box-shadow:none;
     }
     .hero-mobile{
         display: none;
