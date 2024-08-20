@@ -22,17 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-// regionButtons.forEach(button => {
-//   button.addEventListener('click', function() {
-//     regionButtons.forEach(btn => btn.classList.remove('active'));
-//     this.classList.add('active');
-//     updateRegionInfo(this.dataset.region);
-//   });
-// });
-
-    
-
   document.addEventListener('DOMContentLoaded', function () {
     const regionSelect = document.getElementById('region-select');
     const regionData = {
