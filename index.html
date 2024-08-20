@@ -8,9 +8,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/landmark.css">
+    <link rel="stylesheet" href="./assets/css/states.css">
 </head>
 
 <body>
@@ -42,7 +45,8 @@
         </div>
 
         <div id="top" class="top" onclick="window.scrollTo(0,0)">
-            <i class="fa-solid fa-arrow-up fa-bounce " style="--fa-bounce-start-scale-x: 1;--fa-bounce-start-scale-y: 1;--fa-bounce-jump-scale-x: 1;--fa-bounce-jump-scale-y: 1;--fa-bounce-land-scale-x: 1;--fa-bounce-land-scale-y: 1;--fa-bounce-rebound: 0;"></i>
+            <i class="fa-solid fa-arrow-up fa-bounce "
+                style="--fa-bounce-start-scale-x: 1;--fa-bounce-start-scale-y: 1;--fa-bounce-jump-scale-x: 1;--fa-bounce-jump-scale-y: 1;--fa-bounce-land-scale-x: 1;--fa-bounce-land-scale-y: 1;--fa-bounce-rebound: 0;"></i>
         </div>
     </header>
 
@@ -58,7 +62,7 @@
                 <div class="landmark-content">
                     <h3>Forts</h3>
                     <p>Indian forts are grand historical landmarks that reflect the country’s rich heritage and
-                        architectural brilliance.</p>
+                        architectural brilliance. forts is pride of india.</p>
                     <a href="#" target="_blank" class="learn-more">Learn
                         More <i class="fas fa-arrow-right"></i></a>
                 </div>
@@ -106,7 +110,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Stats Section -->
         <div class="india-stats">
             <div class="stats-container">
@@ -134,15 +138,58 @@
         </div>
     </section>
 
+    <section id="culture" class="region-section">
+        <h2 class="section-title">States</h2>
 
-
+        <div class="int-sec">
+            <h3>Explore Indian States </h3>
+            <div class="region-selector">
+                
+               <h4>Select State :</h4> 
+                <select id="region-select" class="region-select">
+                    <option value="punjab" selected>Punjab</option>
+                    <option value="sindh">Sindh</option>
+                    <option value="balochistan">Balochistan</option>
+                    <option value="kpk">Khyber Pakhtunkhwa</option>
+                    <option value="gilgit">Gilgit-Baltistan</option>
+                </select>
+            </div>
+        
+        </div>
+        <div class="culture-interactive">
+            
+            <div class="region-info-container">
+                <div class="region-image">
+                    <img src="./assets/images/temples/Somanath_mandir_cropped.jpeg" alt="Punjab Culture"
+                        id="region-image">
+                </div>
+                <div class="region-info">
+                    <h4 id="region-name">Punjab</h4>
+                    <p id="region-description">Known for its vibrant bhangra dance, colorful truck art, and delicious
+                        cuisine including sarson ka saag and makki di roti.</p>
+                    <ul class="region-highlights">
+                        <li><strong>Capital:</strong> <span id="region-capital">Lahore</span></li>
+                        <li><strong>Famous Landmark:</strong> <span id="region-landmark">Badshahi Mosque</span></li>
+                        <li><strong>Traditional Dress:</strong> <span id="region-dress">Shalwar Kameez with
+                                Turban</span></li>
+                        <li><strong>Popular Festival:</strong> <span id="region-festival">Basant</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="region-facts">
+                <h5>Did You Know?</h5>
+                <p id="region-fact">Punjab is home to five rivers: Sutlej, Beas, Ravi, Chenab, and Jhelum, which give
+                    the region its name "Punjab" meaning "land of five rivers".</p>
+            </div>
+        </div>
+    </section>
 
 
 
 
 
     <!-- script section  -->
-    <script src="script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
