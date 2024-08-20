@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
             landmark: "Badshahi Mosque",
             dress: "Shalwar Kameez with Turban",
             festival: "Basant",
-            fact: "Punjab is home to five rivers: Sutlej, Beas, Ravi, Chenab, and Jhelum, which give the region its name 'Punjab' meaning 'land of five rivers'.",
             image: "./assets/images/temples/Somanath_mandir_cropped.jpeg"
         },
         sindh: {
@@ -53,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
             landmark: "Mohatta Palace",
             dress: "Ajrak and Topi",
             festival: "Sindhi Topi Day",
-            fact: "Sindh is home to the world's largest irrigation system, the Indus Basin Irrigation System.",
             image: "./images/sindh-culture.jpg"
         },
         balochistan: {
@@ -63,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
             landmark: "Ziarat Juniper Forest",
             dress: "Shalwar Kameez and Turban for men, Shalwar Kameez for women",
             festival: "Kalash Festival",
-            fact: "Balochistan is Pakistan's largest province, sharing borders with Iran and Afghanistan.",
             image: "./images/balochistan-culture.jpg"
         },
         kpk: {
@@ -73,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
             landmark: "Khyber Pass",
             dress: "Shalwar Kameez and Waistcoat for men, Shalwar Kameez for women",
             festival: "Basant",
-            fact: "KPK is home to the ancient Gandhara civilization and shares a border with Afghanistan.",
             image: "./images/kpk-culture.jpg"
         },
         gilgit: {
@@ -83,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
             landmark: "K2 Mountain",
             dress: "Shalwar Kameez and Cap for men, Shalwar Kameez for women",
             festival: "Hunza Festival",
-            fact: "Gilgit-Baltistan is known as the 'Roof of the World' due to its high altitude.",
             image: "./images/gilgit-culture.jpg"
         }
     };
@@ -96,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('region-landmark').textContent = data.landmark;
         document.getElementById('region-dress').textContent = data.dress;
         document.getElementById('region-festival').textContent = data.festival;
-        document.getElementById('region-fact').textContent = data.fact;
         document.getElementById('region-image').src = data.image;
     }
 

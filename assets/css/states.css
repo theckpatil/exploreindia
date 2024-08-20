@@ -91,16 +91,11 @@
     margin-bottom: 10px;
 }
 
-.region-facts {
-    background-color: #e6f7ff;
-    border-left: 4px solid #1890ff;
-    padding: 15px;
-    border-radius: 0 8px 8px 0;
+.hrb{
+    margin-bottom: 10px;
 }
-
-.region-facts h5 {
-    margin-top: 0;
-    color: #1890ff;
+.hra{
+    margin-top: 10px;
 }
 @media (max-width: 1024px){
     .int-sec {
@@ -162,10 +157,6 @@
     .region-image img {
         width: 100%;
         border-radius: 15px;
-    }
-
-    .culture-section .section-title {
-        font-size: 2.5em;
     }
 
     .culture-interactive h3 {
