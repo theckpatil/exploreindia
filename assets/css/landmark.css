@@ -2,8 +2,7 @@
   font-size: 2.5rem;
   color: rgb(18, 36, 140);
   text-align: center;
-  margin-bottom: 80px;
-  transform: translateY(30px);
+  padding: 30px;
 }
 .section-title::after {
   content: "";
@@ -27,7 +26,6 @@
   background-color: #ffffff;
 }
 .landmark-section {
-  padding: 20px 5%;
   padding-bottom: 0;
   position: relative;
   overflow: hidden;
@@ -168,9 +166,6 @@
 @media screen and (max-width: 480px) {
   .landmark-card {
     width: calc(100% - 20px);
-  }
-  .landmark-section {
-    padding: 10px 5% 20px 5%;
   }
   .section-title {
     font-size: 1.5rem;
