@@ -133,7 +133,6 @@
     }
      
     .region-select {
-        
         padding: 5px;
         font-size: 1em;
         cursor: pointer;
@@ -169,9 +168,21 @@
     .culture-interactive h3 {
         font-size: 1.8em;
     }
+}
 
-    .region-btn {
-        padding: 10px 18px;
+@media (max-width:480px){
+    .int-sec h3{
+        font-size: 20px;
+    }
+    .int-sec h4{
+        font-size: 15px;
+    }
+    .region-select {
+        padding: 4px;
         font-size: 1em;
+        width: 100px;
+    }
+    .region-selector{
+        width: 90%;
     }
 }
