@@ -1,6 +1,7 @@
 footer {
   background-color: rgb(18, 24, 62);
   height: auto;
+  margin-top: 50px;
 }
 .footer-title {
   font-size: 30px;
@@ -31,6 +32,17 @@ footer {
   color: #ffff;
   border-radius: 8px;
   font-size: 25px;
+}
+.social-icon a{
+    text-decoration: none;
+    color: #ffff;
+    transition: background-color 0.3s, color 0.3s;  /* Smooth transition on hover */
+}
+.social-icon:hover{
+    background-color: orangered;
+}
+.social-icon i:hover{
+    transform: scale(1.08);
 }
 .social-icon-container {
   display: flex;
