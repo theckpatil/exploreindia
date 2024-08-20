@@ -102,8 +102,43 @@
     margin-top: 0;
     color: #1890ff;
 }
-
+@media (max-width: 1024px){
+    .int-sec {
+        display: flex;
+    }   
+}
 @media (max-width: 768px) {
+    .int-sec {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;    /* Center items horizontally */
+    }
+
+    .int-sec h3 {
+        font-size: 28px;
+        margin: 0; /* Remove default margins */
+        margin-bottom: 20px;
+    }
+
+    .region-selector {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 94%; /* Take full width of the container */
+        margin-top: 30px; /* Space between h3 and .region-selector */
+    }
+
+    .int-sec h4{
+        font-size: 18px;
+    }
+     
+    .region-select {
+        
+        padding: 5px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    
     .culture-interactive {
         margin-left: 0;
         margin-right: 0;
