@@ -177,7 +177,7 @@
     .region-select {
         padding: 4px;
         font-size: 1em;
-        width: 100px;
+        width: auto;
     }
     .region-selector{
         width: 90%;
