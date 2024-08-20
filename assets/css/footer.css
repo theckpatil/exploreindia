@@ -1,6 +1,6 @@
 footer {
   background-color: rgb(18, 24, 62);
-  height: 34vh;
+  height: auto;
 }
 .footer-title {
   font-size: 30px;
@@ -51,9 +51,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-  footer {
+  /* footer {
     height: 36vh;
-  }
+  } */
   .footer-title {
     font-size: 25px;
   }
@@ -65,9 +65,3 @@ footer {
     margin-top: 10px;
   }
 }
-
-@media (max-width: 480px) {
-    footer {
-      height: 33vh;
-    }
-  }
