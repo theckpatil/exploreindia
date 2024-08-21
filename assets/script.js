@@ -23,70 +23,47 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
   document.addEventListener('DOMContentLoaded', function () {
-    const regionSelect = document.getElementById('region-select');
-    const regionData = {
-        punjab: {
-            name: "Punjab",
-            description: "Known for its vibrant bhangra dance, colorful truck art, and delicious cuisine including sarson ka saag and makki di roti.",
-            capital: "Lahore",
-            landmark: "Badshahi Mosque",
-            dress: "Shalwar Kameez with Turban",
-            festival: "Basant",
-            image: "./assets/images/temples/Somanath_mandir_cropped.jpeg"
-        },
-        sindh: {
-            name: "Sindh",
-            description: "Famous for its Ajrak cloth, Sindhi embroidery, and the ancient Indus Valley Civilization sites like Mohenjo-daro.",
-            capital: "Karachi",
-            landmark: "Mohatta Palace",
-            dress: "Ajrak and Topi",
-            festival: "Sindhi Topi Day",
-            image: "./images/sindh-culture.jpg"
-        },
-        balochistan: {
-            name: "Balochistan",
-            description: "Known for its vast deserts, rugged mountains, and rich cultural heritage, including Balochi music and handicrafts.",
-            capital: "Quetta",
-            landmark: "Ziarat Juniper Forest",
-            dress: "Shalwar Kameez and Turban for men, Shalwar Kameez for women",
-            festival: "Kalash Festival",
-            image: "./images/balochistan-culture.jpg"
-        },
-        kpk: {
-            name: "Khyber Pakhtunkhwa",
-            description: "Renowned for its historical significance, breathtaking landscapes, and Pashtun culture with its warm hospitality.",
-            capital: "Peshawar",
-            landmark: "Khyber Pass",
-            dress: "Shalwar Kameez and Waistcoat for men, Shalwar Kameez for women",
-            festival: "Basant",
-            image: "./images/kpk-culture.jpg"
-        },
-        gilgit: {
-            name: "Gilgit-Baltistan",
-            description: "A paradise for adventure enthusiasts, offering stunning mountain peaks like K2, glaciers, and serene lakes.",
-            capital: "Gilgit",
-            landmark: "K2 Mountain",
-            dress: "Shalwar Kameez and Cap for men, Shalwar Kameez for women",
-            festival: "Hunza Festival",
-            image: "./images/gilgit-culture.jpg"
-        }
-    };
-
-    function updateRegionInfo(region) {
-        const data = regionData[region];
-        document.getElementById('region-name').textContent = data.name;
-        document.getElementById('region-description').textContent = data.description;
-        document.getElementById('region-capital').textContent = data.capital;
-        document.getElementById('region-landmark').textContent = data.landmark;
-        document.getElementById('region-dress').textContent = data.dress;
-        document.getElementById('region-festival').textContent = data.festival;
-        document.getElementById('region-image').src = data.image;
+    const stateSelect = document.getElementById('state-select');
+    const utSelect = document.getElementById('ut-select');
+   
+    function fetchData(url) {
+        return fetch(url).then(response => response.json());
     }
 
-    regionSelect.addEventListener('change', function () {
-        updateRegionInfo(this.value);
+    function updateRegionInfo(data, region) {
+        document.getElementById('region-name').textContent = data[region].name;
+        document.getElementById('region-description').textContent = data[region].description;
+        document.getElementById('region-capital').textContent = data[region].capital;
+        document.getElementById('region-landmark').textContent = data[region].landmark;
+        document.getElementById('region-dress').textContent = data[region].dress;
+        document.getElementById('region-festival').textContent = data[region].festival;
+        document.getElementById('region-language').textContent = data[region].language;
+        document.getElementById('region-population').textContent = data[region].population;
+        document.getElementById('region-sport').textContent = data[region].sport;
+        document.getElementById('region-image').src = data[region].image;
+    }
+
+    stateSelect.addEventListener('change', function () {
+        fetchData('./assets/states.json').then(stateData => {
+            updateRegionInfo(stateData, this.value);
+        }).catch(error => console.error('Error loading state data:', error));
     });
 
-    // Initialize the content with the selected region (Punjab by default)
-    updateRegionInfo(regionSelect.value);
+    utSelect.addEventListener('change', function () {
+        fetchData('./uts.json').then(utData => {
+            updateRegionInfo(utData, this.value);
+        }).catch(error => console.error('Error loading UT data:', error));
+    });
+
+    // Initialize the content with the selected region (Maharashtra by default)
+    fetchData('./assets/states.json').then(stateData => {
+        updateRegionInfo(stateData, stateSelect.value);
+    }).catch(error => console.error('Error loading default state data:', error));
+
+    // Initialize the content with the selected region (Delhi by default)
+    // fetchData('./assets/ut.json').then(stateData => {
+    //     updateRegionInfo(stateData, stateSelect.value);
+    // }).catch(error => console.error('Error loading default state data:', error));
+
+    
 });
