@@ -9,7 +9,9 @@
     "landmark": "Tirupati Temple",
     "dress": "Sari and Dhoti",
     "festival": "Ugadi",
-    "image": "./images/andhra_pradesh.jpg"
+    "image": "./assets/images/states/andhra_map.svg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Andhra_Pradesh",
+    "official_link":"https://ap.gov.in/"
   },
   "Arunachal Pradesh": {
     "name": "Arunachal Pradesh",
@@ -21,31 +23,37 @@
     "landmark": "Tawang Monastery",
     "dress": "Gale and Jacket",
     "festival": "Losar",
-    "image": "./images/arunachal_pradesh.jpg"
+    "image": "./assets/images/states/arunachal_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Arunachal_Pradesh",
+    "official_link":"https://arunachalpradesh.gov.in/"
   },
   "Assam": {
     "name": "Assam",
     "description": "Known for its tea gardens, rich culture, and the annual Bihu festival.",
     "capital": "Dispur",
     "language": "Assamese",
-    "population": "31,205,576",
+    "population": "31,169,272",
     "sport": "Football",
     "landmark": "Kamakhya Temple",
     "dress": "Mekhela Chador",
     "festival": "Bihu",
-    "image": "./images/assam.jpg"
+    "image": "./assets/images/states/Assam_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Assam",
+    "official_link":"https://assam.gov.in/"
   },
   "Bihar": {
     "name": "Bihar",
     "description": "A state with a rich historical legacy, home to ancient universities like Nalanda and the Mahabodhi Temple.",
     "capital": "Patna",
     "language": "Hindi",
-    "population": "104,099,452",
+    "population": "130,725,310",
     "sport": "Wrestling",
     "landmark": "Mahabodhi Temple",
     "dress": "Dhoti and Kurta",
     "festival": "Chhath Puja",
-    "image": "./images/bihar.jpg"
+    "image": "./assets/images/states/Bihar_map.png",
+    "wiki_link":"https://en.wikipedia.org/wiki/Bihar",
+    "official_link":"https://state.bihar.gov.in/main/CitizenHome.html"
   },
   "Chhattisgarh": {
     "name": "Chhattisgarh",
