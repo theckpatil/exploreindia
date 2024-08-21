@@ -13,24 +13,17 @@ navToggle.addEventListener("click", () => {
     }
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
-    });
-});
-
-  document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
+    // Get references to the state and UT select elements
     const stateSelect = document.getElementById('state-select');
     const utSelect = document.getElementById('ut-select');
    
+    // Function to fetch JSON data from a given URL
     function fetchData(url) {
         return fetch(url).then(response => response.json());
     }
 
-
+    // Function to update state information on the page
     function updateStateInfo(data, state) {
         document.getElementById('state-name').textContent = data[state].name;
         document.getElementById('state-description').textContent = data[state].description;
@@ -44,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('state-image').src = data[state].image;
     }
 
+    // Function to update UT (Union Territory) information on the page
     function updateUTInfo(data, ut) {
             document.getElementById('ut-name').textContent = data[ut].name;
             document.getElementById('ut-description').textContent = data[ut].description;
@@ -57,12 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('ut-image').src = data[ut].image;
     }
 
+    // Event listener for when a state is selected from the dropdown
     stateSelect.addEventListener('change', function () {
         fetchData('./assets/json/states.json').then(stateData => {
             updateStateInfo(stateData, this.value);
         }).catch(error => console.error('Error loading state data:', error));
     });
 
+    // Event listener for when a UT is selected from the dropdown
     utSelect.addEventListener('change', function () {
         fetchData('./assets/json/uts.json').then(utData => {
             updateUTInfo(utData, this.value);
