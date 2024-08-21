@@ -1,186 +1,191 @@
 .culture-interactive {
-    background-color: #f6f6f6;
-    margin: 2vh 2vw;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #f6f6f6;
+  margin: 2vh 2vw;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .int-sec {
-    margin: 2vh 2vw;
-    text-align: center;
-    background-color: green;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 30px;
-    position: relative; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(0, 0, 0, 0.1);
+  margin: 2vh 2vw;
+  text-align: center;
+  background-color: green;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 -10px 20px rgba(0, 0, 0, 0.1);
 }
-.int-sec h3{
-    color: #ffffff;
-    font-size: 25px;
-    text-transform: uppercase;
+.int-sec h3 {
+  color: #ffffff;
+  font-size: 25px;
+  text-transform: uppercase;
 }
-.int-sec h4{
-    color: #ffffff;
-    font-size: 20px;
-    text-transform: uppercase;
-    margin-right: 15px;
+.int-sec h4 {
+  color: #ffffff;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-right: 15px;
 }
 .region-selector {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
 }
 
 .region-select {
-    /* appearance: none; */
-    background-color: #e0e0e0;
-    border: none;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 3px;
-    font-size: 1em;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+  /* appearance: none; */
+  background-color: #e0e0e0;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  font-size: 1em;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .region-select:focus {
-    outline: none;
+  outline: none;
 }
 
 .region-select option {
-    background-color: #ffffff;
-    color: #333;
-    font-size: 17px;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 17px;
 }
 
 .region-info-container {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
 }
 
 .region-image {
-    flex: 0 0 40%;
-    margin-right: 20px;
+  flex: 0 0 40%;
+  margin-right: 20px;
 }
 
 .region-image img {
-    width: 500px;
-    max-height: 300px;
-    border-radius: 15px;
+  width: 500px;
+  max-height: 300px;
+  border-radius: 15px;
 }
 
 .region-info {
-    flex: 1;
+  flex: 1;
 }
 
 .region-highlights {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .region-highlights li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.hrb{
-    margin-bottom: 10px;
+.hrb {
+  margin-bottom: 10px;
 }
-.hra{
-    margin-top: 10px;
+.hra {
+  margin-top: 10px;
 }
-@media (max-width: 1024px){
-    .int-sec {
-        display: flex;
-    }   
+.Population::after {
+  content: "( Census : 2011 )";
+  font-size: 12px;
+  margin-left: 5px;
+  color: #000;
+}
+@media (max-width: 1024px) {
+  .int-sec {
+    display: flex;
+  }
 }
 @media (max-width: 768px) {
-    .culture-interactive{
-        margin: 2vh 2vw;
-    }
-    .int-sec {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;    /* Center items horizontally */
-    }
+  .culture-interactive {
+    margin: 2vh 2vw;
+  }
+  .int-sec {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
 
-    .int-sec h3 {
-        font-size: 28px;
-        margin: 0; /* Remove default margins */
-        margin-bottom: 20px;
-    }
+  .int-sec h3 {
+    font-size: 28px;
+    margin: 0; /* Remove default margins */
+    margin-bottom: 20px;
+  }
 
-    .region-selector {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 94%; /* Take full width of the container */
-        margin-top: 30px; /* Space between h3 and .region-selector */
-    }
+  .region-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94%; /* Take full width of the container */
+    margin-top: 30px; /* Space between h3 and .region-selector */
+  }
 
-    .int-sec h4{
-        font-size: 18px;
-    }
-     
-    .region-select {
-        padding: 5px;
-        font-size: 1em;
-        cursor: pointer;
-    }
-    
-    .culture-interactive {
-        margin-left: 0;
-        margin-right: 0;
-    }
+  .int-sec h4 {
+    font-size: 18px;
+  }
 
-    .culture-interactive h3 {
-        text-align: center;
-    }    
+  .region-select {
+    padding: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
 
-    .region-info-container {
-        flex-direction: column;
-    }
+  .culture-interactive {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-    .region-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+  .culture-interactive h3 {
+    text-align: center;
+  }
 
-    .region-image img {
-        width: 100%;
-        border-radius: 15px;
-    }
+  .region-info-container {
+    flex-direction: column;
+  }
 
-    .culture-interactive h3 {
-        font-size: 1.8em;
-    }
+  .region-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .region-image img {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .culture-interactive h3 {
+    font-size: 1.8em;
+  }
 }
 
-@media (max-width:480px){
-    .culture-interactive{
-        margin: 2vh 2vw;
-    }
-    .int-sec h3{
-        font-size: 20px;
-    }
-    .int-sec h4{
-        font-size: 15px;
-    }
-    .region-select {
-        padding: 4px;
-        font-size: 1em;
-        width: auto;
-    }
-    .region-selector{
-        width: 90%;
-    }
-
+@media (max-width: 480px) {
+  .culture-interactive {
+    margin: 2vh 2vw;
+  }
+  .int-sec h3 {
+    font-size: 20px;
+  }
+  .int-sec h4 {
+    font-size: 15px;
+  }
+  .region-select {
+    padding: 4px;
+    font-size: 1em;
+    width: auto;
+  }
+  .region-selector {
+    width: 90%;
+  }
 }

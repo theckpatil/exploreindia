@@ -165,7 +165,9 @@
     "landmark": "Gateway of India",
     "dress": "Nauvari Sari and Dhoti",
     "festival": "Ganesh Chaturthi",
-    "image": "./assets/images/temples/Somanath_mandir_cropped.jpeg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Maharashtra",
+    "official_link":"https://maharashtra.gov.in/"
   },
   "Manipur": {
     "name": "Manipur",

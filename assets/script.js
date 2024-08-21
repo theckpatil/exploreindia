@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('state-population').textContent = data[state].population;
         document.getElementById('state-sport').textContent = data[state].sport;
         document.getElementById('state-image').src = data[state].image;
+        document.getElementById('state-wiki-link').href = data[state].wiki_link;
+        document.getElementById('state-official-link').href = data[state].official_link;
     }
 
     // Function to update UT (Union Territory) information on the page
@@ -49,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('ut-population').textContent = data[ut].population;
             document.getElementById('ut-sport').textContent = data[ut].sport;
             document.getElementById('ut-image').src = data[ut].image;
+            document.getElementById('ut-link').href = data[ut].link;
     }
 
     // Event listener for when a state is selected from the dropdown
