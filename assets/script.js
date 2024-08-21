@@ -30,40 +30,54 @@ document.addEventListener('DOMContentLoaded', function() {
         return fetch(url).then(response => response.json());
     }
 
-    function updateRegionInfo(data, region) {
-        document.getElementById('region-name').textContent = data[region].name;
-        document.getElementById('region-description').textContent = data[region].description;
-        document.getElementById('region-capital').textContent = data[region].capital;
-        document.getElementById('region-landmark').textContent = data[region].landmark;
-        document.getElementById('region-dress').textContent = data[region].dress;
-        document.getElementById('region-festival').textContent = data[region].festival;
-        document.getElementById('region-language').textContent = data[region].language;
-        document.getElementById('region-population').textContent = data[region].population;
-        document.getElementById('region-sport').textContent = data[region].sport;
-        document.getElementById('region-image').src = data[region].image;
+
+    function updateStateInfo(data, state) {
+        document.getElementById('state-name').textContent = data[state].name;
+        document.getElementById('state-description').textContent = data[state].description;
+        document.getElementById('state-capital').textContent = data[state].capital;
+        document.getElementById('state-landmark').textContent = data[state].landmark;
+        document.getElementById('state-dress').textContent = data[state].dress;
+        document.getElementById('state-festival').textContent = data[state].festival;
+        document.getElementById('state-language').textContent = data[state].language;
+        document.getElementById('state-population').textContent = data[state].population;
+        document.getElementById('state-sport').textContent = data[state].sport;
+        document.getElementById('state-image').src = data[state].image;
+    }
+
+    function updateUTInfo(data, ut) {
+            document.getElementById('ut-name').textContent = data[ut].name;
+            document.getElementById('ut-description').textContent = data[ut].description;
+            document.getElementById('ut-capital').textContent = data[ut].capital;
+            document.getElementById('ut-landmark').textContent = data[ut].landmark;
+            document.getElementById('ut-dress').textContent = data[ut].dress;
+            document.getElementById('ut-festival').textContent = data[ut].festival;
+            document.getElementById('ut-language').textContent = data[ut].language;
+            document.getElementById('ut-population').textContent = data[ut].population;
+            document.getElementById('ut-sport').textContent = data[ut].sport;
+            document.getElementById('ut-image').src = data[ut].image;
     }
 
     stateSelect.addEventListener('change', function () {
         fetchData('./assets/json/states.json').then(stateData => {
-            updateRegionInfo(stateData, this.value);
+            updateStateInfo(stateData, this.value);
         }).catch(error => console.error('Error loading state data:', error));
     });
 
     utSelect.addEventListener('change', function () {
-        fetchData('./uts.json').then(utData => {
-            updateRegionInfo(utData, this.value);
+        fetchData('./assets/json/uts.json').then(utData => {
+            updateUTInfo(utData, this.value);
         }).catch(error => console.error('Error loading UT data:', error));
     });
 
     // Initialize the content with the selected region (Maharashtra by default)
     fetchData('./assets/json/states.json').then(stateData => {
-        updateRegionInfo(stateData, stateSelect.value);
+        updateStateInfo(stateData, stateSelect.value);
     }).catch(error => console.error('Error loading default state data:', error));
 
     // Initialize the content with the selected region (Delhi by default)
-    // fetchData('./assets/ut.json').then(stateData => {
-    //     updateRegionInfo(stateData, stateSelect.value);
-    // }).catch(error => console.error('Error loading default state data:', error));
+    fetchData('./assets/json/uts.json').then(utData => {
+        updateUTInfo(utData, utSelect.value);
+    }).catch(error => console.error('Error loading default state data:', error));
 
     
 });

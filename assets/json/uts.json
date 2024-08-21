@@ -1,0 +1,98 @@
+{
+    "andaman_nicobar": {
+        "name": "Andaman and Nicobar Islands",
+        "description": "A group of picturesque islands known for their pristine beaches, rich marine life, and diverse culture.",
+        "capital": "Port Blair",
+        "language": "Hindi, English",
+        "population": "380,520",
+        "landmark": "Cellular Jail",
+        "dress": "Western and traditional attire",
+        "festival": "Island Tourism Festival",
+        "sport": "Water Sports",
+        "image": "./images/andaman_nicobar.jpg"
+    },
+    "chandigarh": {
+        "name": "Chandigarh",
+        "description": "A well-planned city known for its modern architecture and as the joint capital of Punjab and Haryana.",
+        "capital": "Chandigarh",
+        "language": "Punjabi, Hindi",
+        "population": "1,055,450",
+        "landmark": "Rock Garden",
+        "dress": "Traditional Punjabi attire",
+        "festival": "Rose Festival",
+        "sport": "Cricket",
+        "image": "./images/chandigarh.jpg"
+    },
+    "dadra_nagar_haveli_daman_diu": {
+        "name": "Dadra and Nagar Haveli and Daman and Diu",
+        "description": "Known for its beaches, Portuguese colonial architecture, and serene environment.",
+        "capital": "Daman",
+        "language": "Gujarati, Hindi",
+        "population": "585,764",
+        "landmark": "Diu Fort",
+        "dress": "Traditional Gujarati attire",
+        "festival": "Nariyal Poornima",
+        "sport": "Water Sports",
+        "image": "./images/dadra_nagar_haveli_daman_diu.jpg"
+    },
+    "delhi": {
+        "name": "Delhi",
+        "description": "The capital of India, known for its rich history, diverse culture, and significant landmarks.",
+        "capital": "New Delhi",
+        "language": "Hindi, English",
+        "population": "18,710,922",
+        "landmark": "India Gate",
+        "dress": "Modern and traditional Indian attire",
+        "festival": "Diwali",
+        "sport": "Cricket",
+        "image": "./images/delhi.jpg"
+    },
+    "lakshadweep": {
+        "name": "Lakshadweep",
+        "description": "A group of islands known for their exotic beaches, coral reefs, and marine life.",
+        "capital": "Kavaratti",
+        "language": "Malayalam, English",
+        "population": "64,473",
+        "landmark": "Agatti Island",
+        "dress": "Traditional Kerala attire",
+        "festival": "Eid ul-Fitr",
+        "sport": "Water Sports",
+        "image": "./images/lakshadweep.jpg"
+    },
+    "ladakh": {
+        "name": "Ladakh",
+        "description": "Known for its rugged terrain, Buddhist monasteries, and the majestic Himalayas.",
+        "capital": "Leh",
+        "language": "Ladakhi, Hindi",
+        "population": "274,289",
+        "landmark": "Pangong Lake",
+        "dress": "Traditional Ladakhi attire",
+        "festival": "Hemis Festival",
+        "sport": "Polo",
+        "image": "./images/ladakh.jpg"
+    },
+    "puducherry": {
+        "name": "Puducherry",
+        "description": "A former French colony known for its beaches, Auroville, and French architecture.",
+        "capital": "Puducherry",
+        "language": "Tamil, French",
+        "population": "1,247,953",
+        "landmark": "Auroville",
+        "dress": "Traditional South Indian attire",
+        "festival": "Pongal",
+        "sport": "Kabaddi",
+        "image": "./images/puducherry.jpg"
+    },
+    "jammu_kashmir": {
+        "name": "Jammu and Kashmir",
+        "description": "Known for its beautiful landscapes, valleys, and the rich culture of Kashmir.",
+        "capital": "Srinagar (Summer), Jammu (Winter)",
+        "language": "Kashmiri, Dogri",
+        "population": "12,541,302",
+        "landmark": "Dal Lake",
+        "dress": "Pheran",
+        "festival": "Shikara Festival",
+        "sport": "Cricket",
+        "image": "./images/jammu_kashmir.jpg"
+    }
+}
