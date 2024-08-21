@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     stateSelect.addEventListener('change', function () {
-        fetchData('./assets/states.json').then(stateData => {
+        fetchData('./assets/json/states.json').then(stateData => {
             updateRegionInfo(stateData, this.value);
         }).catch(error => console.error('Error loading state data:', error));
     });
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initialize the content with the selected region (Maharashtra by default)
-    fetchData('./assets/states.json').then(stateData => {
+    fetchData('./assets/json/states.json').then(stateData => {
         updateRegionInfo(stateData, stateSelect.value);
     }).catch(error => console.error('Error loading default state data:', error));
 
