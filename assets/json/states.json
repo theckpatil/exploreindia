@@ -79,7 +79,9 @@
     "landmark": "Basilica of Bom Jesus",
     "dress": "Pano Bhaju",
     "festival": "Carnival",
-    "image": "./images/goa.jpg"
+    "image": "./assets/images/states/Goa_map.png",
+    "wiki_link":"https://en.wikipedia.org/wiki/Goa",
+    "official_link":"https://goa.gov.in/"
   },
   "Gujarat": {
     "name": "Gujarat",
@@ -91,7 +93,9 @@
     "landmark": "Statue of Unity",
     "dress": "Chaniya Choli and Kediyu",
     "festival": "Navratri",
-    "image": "./images/gujarat.jpg"
+    "image": "./assets/images/states/Gujarat_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Gujarat",
+    "official_link":"https://gujaratindia.gov.in/"
   },
   "Haryana": {
     "name": "Haryana",
@@ -103,7 +107,9 @@
     "landmark": "Kingdom of Dreams",
     "dress": "Dhoti and Kurta",
     "festival": "Lohri",
-    "image": "./images/haryana.jpg"
+    "image": "./assets/images/states/Haryana_map.svg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Haryana",
+    "official_link":"https://Haryana.gov.in/"
   },
   "Himachal Pradesh": {
     "name": "Himachal Pradesh",
@@ -115,7 +121,9 @@
     "landmark": "Rohtang Pass",
     "dress": "Chola and Dora",
     "festival": "Dussehra",
-    "image": "./images/himachal_pradesh.jpg"
+    "image": "./assets/images/states/Himachal_map.png",
+    "wiki_link":"https://en.wikipedia.org/wiki/Himachal_Pradesh",
+    "official_link":"https://himachal.nic.in/en-IN/"
   },
   "Jharkhand": {
     "name": "Jharkhand",
@@ -127,31 +135,37 @@
     "landmark": "Dassam Falls",
     "dress": "Panchi and Parhan",
     "festival": "Sarhul",
-    "image": "./images/jharkhand.jpg"
+    "image": "./assets/images/states/Jharkhand_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Jharkhand",
+    "official_link":"http://jharkhand.gov.in/"
   },
   "Karnataka": {
     "name": "Karnataka",
     "description": "Known for its rich history, the IT hub Bengaluru, and classical dance forms like Bharatanatyam.",
     "capital": "Bengaluru",
     "language": "Kannada",
-    "population": "61,095,297",
+    "population": "61,130,704",
     "sport": "Cricket",
     "landmark": "Mysore Palace",
     "dress": "Sari and Lungi",
     "festival": "Dasara",
-    "image": "./images/karnataka.jpg"
+    "image": "./assets/images/states/Karnataka_map.png",
+    "wiki_link":"https://en.wikipedia.org/wiki/Karnataka",
+    "official_link":"http://Karnataka.gov.in/"
   },
   "Kerala": {
     "name": "Kerala",
     "description": "Known as 'God's Own Country', famous for its backwaters, Ayurveda, and vibrant festivals.",
     "capital": "Thiruvananthapuram",
     "language": "Malayalam",
-    "population": "33,406,061",
+    "population": "34,630,192",
     "sport": "Football",
     "landmark": "Alleppey Backwaters",
     "dress": "Mundu and Neriathu",
     "festival": "Onam",
-    "image": "./images/kerala.jpg"
+    "image": "./assets/images/states/Kerala_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Kerala",
+    "official_link":"http://kerala.gov.in/"
   },
   "Madhya Pradesh": {
     "name": "Madhya Pradesh",
@@ -163,7 +177,9 @@
     "landmark": "Sanchi Stupa",
     "dress": "Lugda and Dhoti",
     "festival": "Lokrang",
-    "image": "./images/madhya_pradesh.jpg"
+    "image": "./assets/images/states/MP_map.png",
+    "wiki_link":"https://en.wikipedia.org/wiki/Madhya_Pradesh",
+    "official_link":"http://mp.gov.in/"
   },
   "Maharashtra": {
     "name": "Maharashtra",
@@ -189,7 +205,9 @@
     "landmark": "Loktak Lake",
     "dress": "Phanek and Innaphi",
     "festival": "Yaoshang",
-    "image": "./images/manipur.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Manipur",
+    "official_link":"https://manipur.gov.in/"
   },
   "Meghalaya": {
     "name": "Meghalaya",
@@ -201,7 +219,9 @@
     "landmark": "Living Root Bridges",
     "dress": "Jainsem",
     "festival": "Nongkrem Dance",
-    "image": "./images/meghalaya.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Meghalaya",
+    "official_link":"https://meghalaya.gov.in/"
   },
 
   "Mizoram": {
@@ -209,60 +229,71 @@
     "description": "Known for its rolling hills, rich tribal culture, and bamboo dance (Cheraw).",
     "capital": "Aizawl",
     "language": "Mizo",
-    "population": "1,316,781",
+    "population": "1,252,000",
     "sport": "Football",
     "landmark": "Durtlang Hills",
     "dress": "Puan and Khumbeu",
     "festival": "Chapchar Kut",
-    "image": "./images/mizoram.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Mizoram",
+    "official_link":"https://mizoram.gov.in/"
   },
   "Nagaland": {
     "name": "Nagaland",
     "description": "Famous for its vibrant tribal festivals and the scenic beauty of its hills and valleys.",
     "capital": "Kohima",
     "language": "English",
-    "population": "2,163,000",
-    "sport": "Football",
+    "population": "1,978,502",
+    "sport": "Football",  
     "landmark": "Kohima War Cemetery",
     "dress": "Naga Shawl",
     "festival": "Hornbill Festival",
-    "image": "./images/nagaland.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Nagaland",
+    "official_link":"https://nagaland.gov.in/"
   },
   "Odisha": {
     "name": "Odisha",
     "description": "Known for its ancient temples, Puri's Jagannath Temple, and classical dance Odissi.",
     "capital": "Bhubaneswar",
     "language": "Odia",
-    "population": "46,356,934",
+    "population": "41,974,218",
     "sport": "Hockey",
     "landmark": "Jagannath Temple",
     "dress": "Sambalpuri Sari and Dhoti",
     "festival": "Rath Yatra",
-    "image": "./images/odisha.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Odisha",
+    "official_link":"https://odisha.gov.in/"
+
   },
   "Punjab": {
     "name": "Punjab",
     "description": "Known for its vibrant culture, Bhangra dance, and the Golden Temple in Amritsar.",
     "capital": "Chandigarh",
     "language": "Punjabi",
-    "population": "31,154,352",
+    "population": "27,743,338",
     "sport": "Kabaddi",
     "landmark": "Golden Temple",
     "dress": "Salwar Kameez and Kurta Pajama",
     "festival": "Baisakhi",
-    "image": "./images/punjab.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Punjab,_India",
+    "official_link":"https://punjab.gov.in/"
   },
   "Rajasthan": {
     "name": "Rajasthan",
     "description": "Known for its majestic forts, palaces, and the Thar Desert.",
     "capital": "Jaipur",
     "language": "Hindi",
-    "population": "81,032,689",
+    "population": " 68,548,437",
     "sport": "Polo",
     "landmark": "Hawa Mahal",
     "dress": "Ghagra Choli and Dhoti",
     "festival": "Desert Festival",
-    "image": "./images/rajasthan.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Rajasthan",
+    "official_link":"https://rajasthan.gov.in/"
   },
   "Sikkim": {
     "name": "Sikkim",
@@ -274,7 +305,9 @@
     "landmark": "Rumtek Monastery",
     "dress": "Bakhu",
     "festival": "Losar",
-    "image": "./images/sikkim.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Sikkim",
+    "official_link":"https://sikkim.gov.in/"
   },
   "Tamil Nadu": {
     "name": "Tamil Nadu",
@@ -286,43 +319,51 @@
     "landmark": "Brihadeeswarar Temple",
     "dress": "Sari and Veshti",
     "festival": "Pongal",
-    "image": "./images/tamil_nadu.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Tamil Nadu",
+    "official_link":"https://www.tn.gov.in/"
   },
   "Telangana": {
     "name": "Telangana",
     "description": "Known for its rich history, Hyderabad's Charminar, and its spicy cuisine.",
     "capital": "Hyderabad",
     "language": "Telugu",
-    "population": "39,362,732",
+    "population": "35,003,674",
     "sport": "Kabaddi",
     "landmark": "Charminar",
     "dress": "Sari and Dhoti",
     "festival": "Bonalu",
-    "image": "./images/telangana.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Telangana",
+    "official_link":"https://telangana.gov.in/"
   },
   "Tripura": {
     "name": "Tripura",
     "description": "Known for its tribal culture, palaces, and the Neermahal Palace.",
     "capital": "Agartala",
     "language": "Bengali",
-    "population": "4,061,455",
+    "population": "4,147,000",
     "sport": "Football",
     "landmark": "Neermahal Palace",
     "dress": "Rignai and Rikutu",
     "festival": "Kharchi Puja",
-    "image": "./images/tripura.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Tripura",
+    "official_link":"https://tripura.gov.in/"
   },
   "Uttar Pradesh": {
     "name": "Uttar Pradesh",
     "description": "Known for its historical significance, including the Taj Mahal, and its vibrant culture.",
     "capital": "Lucknow",
     "language": "Hindi",
-    "population": "199,812,341",
+    "population": "241,066,874",
     "sport": "Kabaddi",
     "landmark": "Taj Mahal",
     "dress": "Sari and Dhoti",
     "festival": "Diwali",
-    "image": "./images/uttar_pradesh.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Uttar_Pradesh",
+    "official_link":"https://up.gov.in/"
   },
   "Uttarakhand": {
     "name": "Uttarakhand",
@@ -334,7 +375,9 @@
     "landmark": "Kedarnath Temple",
     "dress": "Sari and Dhoti",
     "festival": "Kumbh Mela",
-    "image": "./images/uttarakhand.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Uttarakhand",
+    "official_link":"https://uk.gov.in/"
   },
   "West Bengal": {
     "name": "West Bengal",
@@ -346,6 +389,8 @@
     "landmark": "Victoria Memorial",
     "dress": "Sari and Dhoti",
     "festival": "Durga Puja",
-    "image": "./images/west_bengal.jpg"
+    "image": "./assets/images/states/Maharashtra_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/West_Bengal",
+    "official_link":"https://wb.gov.in/"
   }
 }
