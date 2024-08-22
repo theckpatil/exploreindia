@@ -73,8 +73,8 @@
 }
 
 .region-image img {
-  width: 500px;
-  max-height: 300px;
+  width: 600px;
+  height: 400px;
   border-radius: 15px;
 }
 
@@ -162,6 +162,7 @@
 
   .region-image img {
     width: 100%;
+    height: auto;
     border-radius: 15px;
   }
 
