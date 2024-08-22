@@ -60,12 +60,14 @@
     "description": "Known for its tribal culture, waterfalls, and the beautiful Chitrakoot Falls.",
     "capital": "Raipur",
     "language": "Hindi",
-    "population": "25,545,198",
+    "population": "29,436,231",
     "sport": "Kabaddi",
     "landmark": "Chitrakoot Falls",
     "dress": "Lugda and Kachhora",
     "festival": "Bastar Dussehra",
-    "image": "./images/chhattisgarh.jpg"
+    "image": "./assets/images/states/Chhattisgarh_map.jpg",
+    "wiki_link":"https://en.wikipedia.org/wiki/Chhattisgarh",
+    "official_link":"https://cgstate.gov.in/"
   },
   "Goa": {
     "name": "Goa",
