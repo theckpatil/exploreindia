@@ -7,18 +7,17 @@ footer {
   font-size: 30px;
   text-align: center;
   font-weight: 700;
-  padding: 8px;
+  padding: 10px;
   border-bottom: 2px solid #ffff;
   color: orangered;
 }
 .footer-content {
-  height: 90px;
+  padding: 10px;
 }
 .footer-content h3 {
   text-align: center;
   text-transform: uppercase;
   color: #ffff;
-  margin-top: 10px;
 }
 .social-icon {
   float: left;
@@ -53,11 +52,11 @@ footer {
   border-top: 1px solid #ffff;
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 .footer-dev p {
   color: #ffff;
   align-items: center;
-  text-transform: capitalize;
   text-align: center;
   padding: 10px;
 }
