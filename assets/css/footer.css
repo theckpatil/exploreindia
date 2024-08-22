@@ -73,6 +73,6 @@ footer {
     text-align: center;
     text-transform: uppercase;
     color: #ffff;
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 }
