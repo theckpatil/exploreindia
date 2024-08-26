@@ -158,11 +158,7 @@ body{
     color: rgb(18, 36, 140);
     text-shadow: 2px 2px 6px rgba(35, 35, 36, 0.34);
 }
-/* Ensure that sections are not hidden behind the sticky navbar
-section {
-    padding-top: 60px; /* Same as the height of your navbar */
-    /* box-sizing: border-box; Ensure padding does not affect layout */
-/* }  */
+
 .cta-button{
     display: inline-block;
     padding: 1rem 2.5rem;
@@ -224,10 +220,9 @@ section {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 53px;
+        top: 60px;
         right: -100%;
         background-color: rgb(18, 24, 62);
-        /* width: 40%; */
         width: auto;
         border-top: 1px solid #ffffff;
         padding: 1rem 0;
