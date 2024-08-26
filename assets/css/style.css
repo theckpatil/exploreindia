@@ -68,6 +68,7 @@ body{
     justify-content: space-between;
     align-items: center;
     position: relative;
+    height: 60px;
     padding: 0.5rem 5%;
     z-index: 1000;
     background: rgb(18, 24, 62);
@@ -156,6 +157,11 @@ body{
     margin-bottom: 1.5rem;
     color: rgb(18, 36, 140);
     text-shadow: 2px 2px 6px rgba(35, 35, 36, 0.34);
+}
+/* Ensure that sections are not hidden behind the sticky navbar */
+section {
+    padding-top: 60px; /* Same as the height of your navbar */
+    box-sizing: border-box; /* Ensure padding does not affect layout */
 }
 .cta-button{
     display: inline-block;

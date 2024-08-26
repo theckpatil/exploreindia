@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const placeholder = document.createElement("div");
   placeholder.classList.add("navbar-placeholder");
 
+  
+
   navbar.parentNode.insertBefore(placeholder, navbar);
 
   const stickyOffset = navbar.offsetTop;
@@ -16,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       navbar.classList.add("sticky");
       placeholder.style.display = "block";
       setTimeout(() => {
-        placeholder.style.height = `${navbar.offsetHeight}px`;
+        placeholder.style.height = `60px`;
         placeholder.style.visibility = 'visible';
         navbar.style.transform = 'translateY(0)'; // Smooth transition
     }, 50); // Slight delay to smoothen transition
