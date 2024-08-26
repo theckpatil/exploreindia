@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
   const placeholder = document.createElement("div");
   placeholder.classList.add("navbar-placeholder");
-  const offset = navbar.offsetHeight;
 
   
 
