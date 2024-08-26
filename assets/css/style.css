@@ -32,7 +32,7 @@ body{
     align-items: center;
     color: #ffffff;
     font-size: 23px;
-    opacity: 0; /* Start with 0 opacity */
+    opacity: 0; 
     transition: opacity 0.5s ease 0.2s, visibility 0s linear 0.7s;
 }
 
