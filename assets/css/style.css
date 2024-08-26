@@ -70,6 +70,18 @@ body{
     position: relative;
     padding: 0.5rem 5%;
     z-index: 10;
+    background: rgb(18, 24, 62);
+    margin-bottom: 15px;
+}
+
+/* Sticky navbar style */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -77,7 +89,7 @@ body{
     font-size: 1.5rem;
     font-weight: 700;
     cursor:grab;
-    color: orangered ;
+    color: #ffffff ;
     text-shadow: 2px 2px 4px rgba(0, 100, 0, 0.15);
     transition: transform 0.3s ease;
 }
@@ -93,7 +105,7 @@ body{
 }
 .nav-links a{
     text-decoration: none;
-    color: orangered;
+    color: #ffffff;
     font-weight: 600;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
@@ -101,7 +113,7 @@ body{
 }
 
 .nav-links a:hover{
-    color: green;
+    color: orangered;
     transform:scale(1.1);
 }
 
@@ -185,25 +197,24 @@ body{
     }
     
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
-        top: 50px;
-        right: 0;
-        /* background-color: #ffffff; */
+        top: 53px;
+        right: -100%;
         background-color: rgb(18, 24, 62);
-        width: 100%;
-        border-top: 1px solid #eaeaea;
+        width: 40%;
+        border-top: 1px solid #ffffff;
         padding: 1rem 0;
         opacity: 0;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        transform: translateY(-10px);
+        transition: right 0.8s ease, opacity 0.3s ease; /* Transition for sliding and opacity */
+        border-bottom-left-radius: 15px;
     }
     
     .nav-links.active {
-        display: flex;
         opacity: 1;
-        transform: translateY(0);
+        right: 0; /* Slide into view */
+
     }
     
     .nav-links li {
@@ -212,11 +223,7 @@ body{
         text-align: center;
         transition: background-color 0.3s ease;
     }
-    
-    .nav-links li:hover {
-        background-color: #f0f0f0;
-    }
-    
+        
     .nav-toggle {
         display: block;
         cursor: pointer;

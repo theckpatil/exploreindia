@@ -1,17 +1,52 @@
-let navToggle = document.getElementsByClassName("nav-toggle")[0];
-let navLinks = document.getElementsByClassName("nav-links")[0];
-let heroContent = document.getElementsByClassName('hero-content')[0];
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links li a');
+    const heroContent = document.querySelector('.hero-content'); 
+    const navbar = document.querySelector('.navbar');
+    const stickyOffset = navbar.offsetTop;
 
-navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    navToggle.classList.toggle("active");
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > stickyOffset) {
+            navbar.classList.add('sticky');
+            document.body.style.paddingTop = `${navbar.offsetHeight}px`;
+        } else {
+            navbar.classList.remove('sticky');
+            document.body.style.paddingTop = '0';
+        }
+    });
 
-    if (navLinks.classList.contains('active')) {
-        heroContent.classList.add('dimmed');
-    } else {
-        heroContent.classList.remove('dimmed');
-    }
-})
+    // Toggle navigation menu visibility
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        navToggle.classList.toggle('active');
+
+        if (navLinks.classList.contains('active')) {
+            heroContent.classList.add('dimmed');
+        } else {
+            heroContent.classList.remove('dimmed');
+        }
+    });
+
+    // Hide the menu when a link is clicked
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+            heroContent.classList.remove('dimmed');
+        });
+    });
+
+    // Hide the menu when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!navLinks.contains(event.target) && !navToggle.contains(event.target)) {
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
+            heroContent.classList.remove('dimmed');
+        }
+    });
+});
+
 
 window.onscroll = function () {
     var topButton = document.getElementById("top");
