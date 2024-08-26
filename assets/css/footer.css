@@ -10,7 +10,25 @@ footer {
   padding: 10px;
   border-bottom: 2px solid #ffff;
   color: orangered;
+  text-transform: uppercase;
+  animation: tirangaAnimation 9s infinite;
 }
+
+@keyframes tirangaAnimation {
+  0% {
+    color: orangered; /* Saffron */
+  }
+  40% {
+    color: white; /* White */
+  }
+  70% {
+    color: green; /* Green */
+  }
+  100% {
+    color: orangered; /* Back to Saffron */
+  }
+}
+
 .footer-content {
   padding: 10px;
 }
