@@ -13,6 +13,17 @@ navToggle.addEventListener("click", () => {
     }
 })
 
+window.onscroll = function () {
+    var topButton = document.getElementById("top");
+
+    // Check if the user has scrolled to the bottom of the page
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 20) {
+        topButton.classList.add("show"); // Show the button
+    } else {
+        topButton.classList.remove("show"); // Hide the button
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
     // Get references to the state and UT select elements
     const stateSelect = document.getElementById('state-select');

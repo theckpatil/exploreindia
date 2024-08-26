@@ -16,6 +16,7 @@ body{
 }    
 
 .top{
+    visibility: hidden;
     position: fixed;
     bottom: 250px;
     right: 5vw;
@@ -31,8 +32,15 @@ body{
     align-items: center;
     color: #ffffff;
     font-size: 23px;
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.5s ease 0.2s, visibility 0s linear 0.7s;
 }
 
+.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s ease 0.3s, visibility 0s linear 0s;
+}
 .hero-section {
     height: 100vh;
     position: relative;
