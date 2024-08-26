@@ -92,6 +92,8 @@ body{
     color: #ffffff ;
     text-shadow: 2px 2px 4px rgba(0, 100, 0, 0.15);
     transition: transform 0.3s ease;
+    transition: color 1s ease-in-out; /* Adjust the duration as needed */
+
 }
 .logo:hover{
     transform:scale(1.2);
@@ -188,7 +190,13 @@ body{
     .cta-button {
         padding: 0.8rem 2rem;
     }
-    
+    .logo:hover{
+        color: orangered;
+        transform: none;
+    }
+    .navbar{
+        margin-bottom: 0;
+    }
     .nav {
         position: relative;
         background-color: #ffffff;
@@ -203,7 +211,8 @@ body{
         top: 53px;
         right: -100%;
         background-color: rgb(18, 24, 62);
-        width: 40%;
+        /* width: 40%; */
+        width: auto;
         border-top: 1px solid #ffffff;
         padding: 1rem 0;
         opacity: 0;
@@ -235,7 +244,7 @@ body{
         width: 25px;
         height: 3px;
         margin-bottom: 5px;
-        background-color: orangered;
+        background-color: #ffffff;
         transition: all 0.3s ease;
         border-radius: 5px;
     }
