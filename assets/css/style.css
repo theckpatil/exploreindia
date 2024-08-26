@@ -158,11 +158,11 @@ body{
     color: rgb(18, 36, 140);
     text-shadow: 2px 2px 6px rgba(35, 35, 36, 0.34);
 }
-/* Ensure that sections are not hidden behind the sticky navbar */
+/* Ensure that sections are not hidden behind the sticky navbar
 section {
     padding-top: 60px; /* Same as the height of your navbar */
-    box-sizing: border-box; /* Ensure padding does not affect layout */
-}
+    /* box-sizing: border-box; Ensure padding does not affect layout */
+/* }  */
 .cta-button{
     display: inline-block;
     padding: 1rem 2.5rem;

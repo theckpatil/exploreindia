@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
   const placeholder = document.createElement("div");
   placeholder.classList.add("navbar-placeholder");
+  const offset = navbar.offsetHeight;
 
   
 
@@ -159,4 +160,28 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) =>
       console.error("Error loading default state data:", error)
     );
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const offset = navbar.offsetHeight;
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
