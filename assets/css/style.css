@@ -46,20 +46,15 @@ body{
     position: relative;
     overflow: hidden;
 }
-.hero-bg-section{
+ .hero-bg-section{
     height: 90vh;
     max-width: 100vw;
-    margin: 0 20px ;
-    border-radius: 15px;
-    overflow: hidden;
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-.hero-desktop{
-    width: 100%;
+} 
+ .hero-desktop{
     height:100%;
-    object-fit: fill;
-    position:absolute;
+    margin: 0 auto;
+    object-fit: cover;
     display: block;
 }
 
@@ -72,8 +67,7 @@ body{
     padding: 0.5rem 5%;
     z-index: 1000;
     background: rgb(18, 24, 62);
-    margin-bottom: 15px;
-    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for smooth effect */
+    transition: top 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
 
 /* Sticky navbar style */
@@ -129,58 +123,26 @@ body{
     color: orangered;
     transform:scale(1.1);
 }
-
-.hero-content{
-    width: 100vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    z-index: 10;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards 0.5s;
+.marquee-container {
+    color: rgb(18, 24, 62);
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight:700;
+    height: 35px;
 }
-@keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-.title{
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: rgb(18, 36, 140);
-    text-shadow: 2px 2px 6px rgba(35, 35, 36, 0.34);
-}
-
-.cta-button{
+.marquee-text {
     display: inline-block;
-    padding: 1rem 2.5rem;
-    background-color: green;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 15px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    opacity: 0;
-    animation: fadeInUp 1s ease forwards 1.5s;
-    box-shadow: 0 8px 15px rgba(59, 59, 59, 0.1);
+    word-spacing: 2px;
+    animation: marquee 30s linear infinite; /* Adjusted time for smooth speed */
 }
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.star {
+    color: rgb(18, 24, 62);
+    margin-right: 10px;
 }
 @media (max-width: 1440px){
 .hero-mobile{
@@ -194,13 +156,6 @@ body{
     }
     .hero-mobile{
         display: none;
-    }
-    .title {
-        font-size: 2rem;
-    }
-        
-    .cta-button {
-        padding: 0.8rem 2rem;
     }
     .logo:hover{
         color: orangered;
@@ -272,11 +227,6 @@ body{
         transform: translateY(-8px) rotate(-45deg);
     }
     
-    .hero-content {
-        z-index: 1;
-        transition: opacity 0.3s ease;
-    }
-
     .hero-section {
         height: 80vh;
     }
@@ -292,25 +242,19 @@ body{
         box-shadow:none;
     }
     
-    .title {
-        font-size: 1.5rem;
-    }
-
-     .cta-button {
-        padding: 0.6rem 1.2rem;
-    }
-
     .hero-section {
-        height: 52vh;
+        height: 50vh;
+        /* background-color: red; */
     }
-    .hero-desktop{
-        display: none;
-    }
-    .hero-mobile{
-        width: 100%;
+    
+     .hero-desktop{
         height:100%;
-        object-fit: fill;
+        width: 100%;
+        margin: 0 auto;
+        object-fit:contain;
         position:absolute;
+        transform: scale(1.2);
         display: block;
     }
+    
 }
