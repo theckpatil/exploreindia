@@ -243,7 +243,8 @@ body{
     }
     
     .hero-section {
-        height: 50vh;
+        /* height: 50vh; */
+        height: 40vh;
     }
     
      .hero-desktop{
