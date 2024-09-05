@@ -69,7 +69,24 @@ body{
     background: rgb(18, 24, 62);
     transition: top 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
+/* Sticky navbar style */
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    transition: transform 50s ease-in-out, top 50s ease-in-out;
+}
 
+.navbar-placeholder {
+    display: none;
+    height: 0;
+    visibility: hidden;
+    transition: height 50s ease-in;
+}
 .logo {
     text-decoration: none;
     font-size: 1.5rem;
@@ -226,7 +243,6 @@ body{
     
     .hero-section {
         height: 50vh;
-        /* background-color: red; */
     }
     
      .hero-desktop{
@@ -235,7 +251,7 @@ body{
         margin: 0 auto;
         object-fit:contain;
         position:absolute;
-        transform: scale(1.2);
+        transform: scale(1.1);
         display: block;
     }
     
