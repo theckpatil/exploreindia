@@ -2,38 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
   const navLinksItems = document.querySelectorAll(".nav-links li a");
-  const heroContent = document.querySelector(".hero-content");
-  const navbar = document.querySelector(".navbar");
-  const placeholder = document.createElement("div");
-  placeholder.classList.add("navbar-placeholder");
-
   
-
-  navbar.parentNode.insertBefore(placeholder, navbar);
-
-  const stickyOffset = navbar.offsetTop;
-
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > stickyOffset) {
-      navbar.classList.add("sticky");
-      placeholder.style.display = "block";
-      setTimeout(() => {
-        placeholder.style.height = `60px`;
-        placeholder.style.visibility = 'visible';
-        navbar.style.transform = 'translateY(0)'; // Smooth transition
-    }, 50); // Slight delay to smoothen transition
-      
-    } else {
-      navbar.classList.remove("sticky");
-      placeholder.style.display = "none";
-      setTimeout(() => {
-        placeholder.style.display = 'none';
-        placeholder.style.height = '0';
-        placeholder.style.visibility = 'hidden';
-    }, 1); // Duration matches CSS transition
-    }
-  });
-
   // Toggle navigation menu visibility
   navToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
