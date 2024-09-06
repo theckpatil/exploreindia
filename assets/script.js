@@ -36,12 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
   navToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
     navToggle.classList.toggle("active");
-
-    if (navLinks.classList.contains("active")) {
-      heroContent.classList.add("dimmed");
-    } else {
-      heroContent.classList.remove("dimmed");
-    }
   });
 
   // Hide the menu when a link is clicked
