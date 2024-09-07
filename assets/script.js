@@ -1,15 +1,18 @@
+/*----------------------------------------------------------------------------
+                  Copyright : Chandrakant Patil
+----------------------------------------------------------------------------*/
+
 document.addEventListener("DOMContentLoaded", function () {
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
   const navLinksItems = document.querySelectorAll(".nav-links li a");
-  
   const navbar = document.querySelector(".navbar");
   const placeholder = document.createElement("div");
   placeholder.classList.add("navbar-placeholder");
-
   navbar.parentNode.insertBefore(placeholder, navbar);
-
   const stickyOffset = navbar.offsetTop;
+
+//----------------------------------------------------------------------------
 
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > stickyOffset) {
@@ -17,26 +20,29 @@ document.addEventListener("DOMContentLoaded", function () {
       placeholder.style.display = "block";
       setTimeout(() => {
         placeholder.style.height = `60px`;
-        placeholder.style.visibility = 'visible';
-        navbar.style.transform = 'translateY(0)'; // Smooth transition
-    }, 50); // Slight delay to smoothen transition
-      
+        placeholder.style.visibility = "visible";
+        navbar.style.transform = "translateY(0)"; // Smooth transition
+      }, 50); // Slight delay to smoothen transition
     } else {
       navbar.classList.remove("sticky");
       placeholder.style.display = "none";
       setTimeout(() => {
-        placeholder.style.display = 'none';
-        placeholder.style.height = '0';
-        placeholder.style.visibility = 'hidden';
-    }, 1); // Duration matches CSS transition
+        placeholder.style.display = "none";
+        placeholder.style.height = "0";
+        placeholder.style.visibility = "hidden";
+      }, 1); // Duration matches CSS transition
     }
   });
+
+//----------------------------------------------------------------------------
 
   // Toggle navigation menu visibility
   navToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
     navToggle.classList.toggle("active");
   });
+
+  //----------------------------------------------------------------------------
 
   // Hide the menu when a link is clicked
   navLinksItems.forEach((link) => {
@@ -46,6 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
       heroContent.classList.remove("dimmed");
     });
   });
+
+  //----------------------------------------------------------------------------
 
   // Hide the menu when clicking outside
   document.addEventListener("click", (event) => {
@@ -57,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//----------------------------------------------------------------------------
+
+//go to top function
 window.onscroll = function () {
   var topButton = document.getElementById("top");
 
@@ -67,6 +78,8 @@ window.onscroll = function () {
     topButton.classList.remove("show"); // Hide the button
   }
 };
+
+//----------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
   // Get references to the state and UT select elements
@@ -81,30 +94,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to update state information on the page
   function updateStateInfo(data, state) {
     document.getElementById("state-name").textContent = data[state].name;
-    document.getElementById("state-description").textContent =
-      data[state].description;
+    document.getElementById("state-description").textContent = data[state].description;
     document.getElementById("state-capital").textContent = data[state].capital;
-    document.getElementById("state-landmark").textContent =
-      data[state].landmark;
+    document.getElementById("state-landmark").textContent = data[state].landmark;
     document.getElementById("state-dress").textContent = data[state].dress;
-    document.getElementById("state-festival").textContent =
-      data[state].festival;
-    document.getElementById("state-language").textContent =
-      data[state].language;
-    document.getElementById("state-population").textContent =
-      data[state].population;
+    document.getElementById("state-festival").textContent = data[state].festival;
+    document.getElementById("state-language").textContent = data[state].language;
+    document.getElementById("state-population").textContent = data[state].population;
     document.getElementById("state-sport").textContent = data[state].sport;
     document.getElementById("state-image").src = data[state].image;
     document.getElementById("state-wiki-link").href = data[state].wiki_link;
-    document.getElementById("state-official-link").href =
-      data[state].official_link;
+    document.getElementById("state-official-link").href = data[state].official_link;
   }
 
   // Function to update UT (Union Territory) information on the page
   function updateUTInfo(data, ut) {
     document.getElementById("ut-name").textContent = data[ut].name;
-    document.getElementById("ut-description").textContent =
-      data[ut].description;
+    document.getElementById("ut-description").textContent = data[ut].description;
     document.getElementById("ut-capital").textContent = data[ut].capital;
     document.getElementById("ut-landmark").textContent = data[ut].landmark;
     document.getElementById("ut-dress").textContent = data[ut].dress;
@@ -153,26 +159,29 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const offset = navbar.offsetHeight;
+//----------------------------------------------------------------------------
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+// function for navbar links smooth scrolling
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.querySelector(".navbar");
+  const navLinks = document.querySelectorAll(".nav-links a");
+  const offset = navbar.offsetHeight;
 
-            if (targetElement) {
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition - offset;
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
 
-                window.scrollBy({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
+      if (targetElement) {
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: "smooth",
         });
+      }
     });
+  });
 });
