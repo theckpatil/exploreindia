@@ -94,9 +94,7 @@ body{
     cursor:grab;
     color: #ffffff ;
     text-shadow: 2px 2px 4px rgba(0, 100, 0, 0.15);
-    transition: transform 0.3s ease;
-    transition: color 1s ease-in-out; /* Adjust the duration as needed */
-
+    transition: transform 0.3s ease, color 1s ease-in-out; /* Adjust the duration as needed */
 }
 .logo:hover{
     transform:scale(1.2);

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   navbar.parentNode.insertBefore(placeholder, navbar);
   const stickyOffset = navbar.offsetTop;
 
-//----------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
 
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > stickyOffset) {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-//----------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
 
   // Toggle navigation menu visibility
   navToggle.addEventListener("click", () => {
@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
       navToggle.classList.remove("active");
-      heroContent.classList.remove("dimmed");
     });
   });
 
@@ -60,31 +59,49 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!navLinks.contains(event.target) && !navToggle.contains(event.target)) {
       navLinks.classList.remove("active");
       navToggle.classList.remove("active");
-      heroContent.classList.remove("dimmed");
     }
   });
 });
 
-//----------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
 
-//go to top function
-window.onscroll = function () {
-  var topButton = document.getElementById("top");
+  //go to top function
+  window.onscroll = function () {
+    var topButton = document.getElementById("top");
 
-  // Check if the user has scrolled to the bottom of the page
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 20) {
-    topButton.classList.add("show"); // Show the button
-  } else {
-    topButton.classList.remove("show"); // Hide the button
-  }
-};
+    // Check if the user has scrolled to the bottom of the page
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 20) {
+      topButton.classList.add("show"); // Show the button
+    } else {
+      topButton.classList.remove("show"); // Hide the button
+    }
+  };
 
-//----------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
   // Get references to the state and UT select elements
   const stateSelect = document.getElementById("state-select");
   const utSelect = document.getElementById("ut-select");
+
+  function updateContent(selectElementId, jsonFilePath, updateFunction) {
+    const selectElement = document.getElementById(selectElementId);
+    selectElement.addEventListener("change", function () {
+      fetchData(jsonFilePath)
+        .then((data) => updateFunction(data, this.value))
+        .catch((error) => console.error(`Error loading data: ${error}`));
+    });
+  
+    // Initialize the content with the default selection
+    fetchData(jsonFilePath)
+      .then((data) => updateFunction(data, selectElement.value))
+      .catch((error) => console.error(`Error loading default data: ${error}`));
+  }
+  
+  // Call this function for states and UTs
+  updateContent("state-select", "./assets/json/states.json", updateStateInfo);
+  updateContent("ut-select", "./assets/json/uts.json", updateUTInfo);
+  
 
   // Function to fetch JSON data from a given URL
   function fetchData(url) {
@@ -119,49 +136,51 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ut-population").textContent = data[ut].population;
     document.getElementById("ut-sport").textContent = data[ut].sport;
     document.getElementById("ut-image").src = data[ut].image;
-    document.getElementById("ut-link").href = data[ut].link;
+    // document.getElementById("ut-link").href = data[ut].link;
+    document.getElementById("ut-wiki-link").href = data[ut].wiki_link;
+    document.getElementById("ut-official-link").href = data[ut].official_link;
   }
 
   // Event listener for when a state is selected from the dropdown
-  stateSelect.addEventListener("change", function () {
-    fetchData("./assets/json/states.json")
-      .then((stateData) => {
-        updateStateInfo(stateData, this.value);
-      })
-      .catch((error) => console.error("Error loading state data:", error));
-  });
+  // stateSelect.addEventListener("change", function () {
+  //   fetchData("./assets/json/states.json")
+  //     .then((stateData) => {
+  //       updateStateInfo(stateData, this.value);
+  //     })
+  //     .catch((error) => console.error("Error loading state data:", error));
+  // });
 
-  // Event listener for when a UT is selected from the dropdown
-  utSelect.addEventListener("change", function () {
-    fetchData("./assets/json/uts.json")
-      .then((utData) => {
-        updateUTInfo(utData, this.value);
-      })
-      .catch((error) => console.error("Error loading UT data:", error));
-  });
+  // // Event listener for when a UT is selected from the dropdown
+  // utSelect.addEventListener("change", function () {
+  //   fetchData("./assets/json/uts.json")
+  //     .then((utData) => {
+  //       updateUTInfo(utData, this.value);
+  //     })
+  //     .catch((error) => console.error("Error loading UT data:", error));
+  // });
 
   // Initialize the content with the selected region (Maharashtra by default)
-  fetchData("./assets/json/states.json")
-    .then((stateData) => {
-      updateStateInfo(stateData, stateSelect.value);
-    })
-    .catch((error) =>
-      console.error("Error loading default state data:", error)
-    );
+  // fetchData("./assets/json/states.json")
+  //   .then((stateData) => {
+  //     updateStateInfo(stateData, stateSelect.value);
+  //   })
+  //   .catch((error) =>
+  //     console.error("Error loading default state data:", error)
+  //   );
 
-  // Initialize the content with the selected region (Delhi by default)
-  fetchData("./assets/json/uts.json")
-    .then((utData) => {
-      updateUTInfo(utData, utSelect.value);
-    })
-    .catch((error) =>
-      console.error("Error loading default state data:", error)
-    );
-});
+  // // Initialize the content with the selected region (Delhi by default)
+  // fetchData("./assets/json/uts.json")
+  //   .then((utData) => {
+  //     updateUTInfo(utData, utSelect.value);
+  //   })
+  //   .catch((error) =>
+  //     console.error("Error loading default state data:", error)
+  //   );
+  });
 
-//----------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
 
-// function for navbar links smooth scrolling
+  // function for navbar links smooth scrolling
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
   const navLinks = document.querySelectorAll(".nav-links a");

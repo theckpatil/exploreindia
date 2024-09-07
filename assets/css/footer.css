@@ -37,18 +37,26 @@ footer {
   text-transform: uppercase;
   color: #ffff;
 }
+.social-icon-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  gap: 15px; 
+
+}
 .social-icon {
-  float: left;
-  align-items: center;
-  margin-left: 10px;
+  /* float: left; */
+  /* margin-left: 15px; */
   width: 40px;
   height: 40px;
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: green;
   color: #ffff;
   border-radius: 8px;
   font-size: 25px;
+  transition: background-color 0.3s, color 0.3s;
 }
 .social-icon a{
     text-decoration: none;
@@ -58,19 +66,11 @@ footer {
 .social-icon:hover{
     background-color: orangered;
 }
-.social-icon i:hover{
-    transform: scale(1.08);
-}
-.social-icon-container {
-  display: flex;
-  justify-content: center;
-  margin: 10px;
-}
 .footer-dev {
   border-top: 1px solid #ffff;
   display: flex;
   justify-content: center;
-  padding: 10px 0 15px 0;
+  padding: 10px 0 20px 0; /* Adjusted padding for better spacing */
 }
 .footer-dev p {
   color: #ffff;
