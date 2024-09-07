@@ -80,24 +80,13 @@ body{
     transform: translateY(-100%);
     transition: transform 50s ease-in-out, top 50s ease-in-out;
 }
-.sticky-placeholder {
-    display: block;
-    height: 60px;
-    visibility: visible;
-  }
-  
-.hidden-placeholder {
+
+.navbar-placeholder {
     display: none;
     height: 0;
     visibility: hidden;
-  }
-  
-/* .navbar-placeholder {
-    display: none;
-    height: 0;
-    visibility: hidden;
-    transition: height 50s ease-in;
-} */
+    /* transition: height 50s ease-in; */
+}
 .logo {
     text-decoration: none;
     font-size: 1.5rem;

@@ -1,6 +1,7 @@
 .culture-interactive {
   background-color: #f6f6f6;
-  margin: 2vh 2vw;
+  margin: 0 2vw;
+  margin-bottom: 2vh;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   padding: 30px;
@@ -8,7 +9,7 @@
 }
 
 .int-sec {
-  margin: 2vh 2vw;
+  margin: 0 2vw;
   text-align: center;
   background-color: green;
   border-top-left-radius: 15px;
@@ -39,7 +40,6 @@
 }
 
 .region-select {
-  /* appearance: none; */
   background-color: #e0e0e0;
   border: none;
   padding: 5px;
@@ -110,7 +110,8 @@
 }
 @media (max-width: 768px) {
   .culture-interactive {
-    margin: 2vh 2vw;
+    margin: 0 2vw;
+    margin-bottom: 2vh;
   }
   .int-sec {
     display: flex;
@@ -173,7 +174,8 @@
 
 @media (max-width: 480px) {
   .culture-interactive {
-    margin: 2vh 2vw;
+    margin: 0 2vw;
+    margin-bottom: 2vh;
   }
   .int-sec h3 {
     font-size: 20px;

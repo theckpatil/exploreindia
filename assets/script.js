@@ -8,45 +8,31 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinksItems = document.querySelectorAll(".nav-links li a");
   const navbar = document.querySelector(".navbar");
   const placeholder = document.createElement("div");
-  placeholder.classList.add("hidden-placeholder");
+  placeholder.classList.add("navbar-placeholder");
   navbar.parentNode.insertBefore(placeholder, navbar);
   const stickyOffset = navbar.offsetTop;
 
   //----------------------------------------------------------------------------
 
-  // window.addEventListener("scroll", () => {
-  //   if (window.pageYOffset > stickyOffset) {
-  //     navbar.classList.add("sticky");
-  //     placeholder.style.display = "block";
-  //     setTimeout(() => {
-  //       placeholder.style.height = `60px`;
-  //       placeholder.style.visibility = "visible";
-  //       navbar.style.transform = "translateY(0)"; // Smooth transition
-  //     }, 50); // Slight delay to smoothen transition
-  //   } else {
-  //     navbar.classList.remove("sticky");
-  //     placeholder.style.display = "none";
-  //     setTimeout(() => {
-  //       placeholder.style.display = "none";
-  //       placeholder.style.height = "0";
-  //       placeholder.style.visibility = "hidden";
-  //     }, 1); // Duration matches CSS transition
-  //   }
-  // });
-
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > stickyOffset) {
       navbar.classList.add("sticky");
-      placeholder.classList.add("sticky-placeholder");
+      placeholder.style.display = "block";
+      setTimeout(() => {
+        placeholder.style.height = `60px`;
+        placeholder.style.visibility = "visible";
+        navbar.style.transform = "translateY(0)"; // Smooth transition
+      }, 50); // Slight delay to smoothen transition
     } else {
       navbar.classList.remove("sticky");
-      placeholder.classList.add("hidden-placeholder");
+      placeholder.style.display = "none";
       setTimeout(() => {
-        placeholder.classList.remove("sticky-placeholder", "hidden-placeholder");
-      }, 1);
+        placeholder.style.display = "none";
+        placeholder.style.height = "0";
+        placeholder.style.visibility = "hidden";
+      }, 1); // Duration matches CSS transition
     }
   });
-  
 
   //----------------------------------------------------------------------------
 
@@ -108,11 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => updateFunction(data, selectElement.value))
       .catch((error) => console.error(`Error loading default data: ${error}`));
   }
-  
-  // Call this function for states and UTs
-  updateContent("state-select", "./assets/json/states.json", updateStateInfo);
-  updateContent("ut-select", "./assets/json/uts.json", updateUTInfo);
-  
+    
   // Function to fetch JSON data from a given URL
   function fetchData(url) {
     return fetch(url).then((response) => response.json());
@@ -150,6 +132,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ut-wiki-link").href = data[ut].wiki_link;
     document.getElementById("ut-official-link").href = data[ut].official_link;
   }
+    // Call this function for states and UTs
+      updateContent("state-select", "./assets/json/states.json", updateStateInfo);
+      updateContent("ut-select", "./assets/json/uts.json", updateUTInfo);
+
   });
 
   //----------------------------------------------------------------------------
