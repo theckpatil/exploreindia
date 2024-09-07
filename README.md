@@ -57,23 +57,22 @@ Explore India’s rich history through our detailed sections on forts, palaces, 
 
 ## 📸 Screenshots
 
-Here are some screenshots showcasing the Indian States Explorer:
-
 ### Homepage
-![Homepage](assets/screenshots/homepage.png)
-*The main landing page with an overview of the Indian States Explorer.*
+![Homepage](./assets/images/screenshots/home.png)
 
-### State Details
-![State Details](assets/screenshots/state-details.png)
-*A detailed view of a selected state, highlighting information such as landmarks and local details.*
 
 ### Landmarks Section
-![Landmarks](assets/screenshots/landmarks.png)
+![Landmarks](./assets/images/screenshots/landamark.png)
 *A section dedicated to exploring various landmarks across India.*
 
-### Mobile View
-![Mobile View](assets/screenshots/mobile-view.png)
-*How the application looks on mobile devices, demonstrating responsive design.*
+### State Details
+![State Details](./assets/images/screenshots/state.png)
+*A detailed view of a selected state, highlighting information such as capital and local details.*
+
+### Union Territories Details
+![State Details](./assets/images/screenshots/ut.png)
+*A detailed view of a selected Union Territory, highlighting information such as capital and local details.*
+
 
 ## 📜 License
 
