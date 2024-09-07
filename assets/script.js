@@ -128,13 +128,12 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ut-population").textContent = data[ut].population;
     document.getElementById("ut-sport").textContent = data[ut].sport;
     document.getElementById("ut-image").src = data[ut].image;
-    // document.getElementById("ut-link").href = data[ut].link;
     document.getElementById("ut-wiki-link").href = data[ut].wiki_link;
     document.getElementById("ut-official-link").href = data[ut].official_link;
   }
     // Call this function for states and UTs
-      updateContent("state-select", "./assets/json/states.json", updateStateInfo);
-      updateContent("ut-select", "./assets/json/uts.json", updateUTInfo);
+      updateContent("state-select", "./assets/data/states.json", updateStateInfo);
+      updateContent("ut-select", "./assets/data/uts.json", updateUTInfo);
 
   });
 
