@@ -77,7 +77,7 @@ Here are some screenshots showcasing the Indian States Explorer:
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
