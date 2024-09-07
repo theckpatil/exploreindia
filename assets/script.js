@@ -8,31 +8,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinksItems = document.querySelectorAll(".nav-links li a");
   const navbar = document.querySelector(".navbar");
   const placeholder = document.createElement("div");
-  placeholder.classList.add("navbar-placeholder");
+  placeholder.classList.add("hidden-placeholder");
   navbar.parentNode.insertBefore(placeholder, navbar);
   const stickyOffset = navbar.offsetTop;
 
   //----------------------------------------------------------------------------
 
+  // window.addEventListener("scroll", () => {
+  //   if (window.pageYOffset > stickyOffset) {
+  //     navbar.classList.add("sticky");
+  //     placeholder.style.display = "block";
+  //     setTimeout(() => {
+  //       placeholder.style.height = `60px`;
+  //       placeholder.style.visibility = "visible";
+  //       navbar.style.transform = "translateY(0)"; // Smooth transition
+  //     }, 50); // Slight delay to smoothen transition
+  //   } else {
+  //     navbar.classList.remove("sticky");
+  //     placeholder.style.display = "none";
+  //     setTimeout(() => {
+  //       placeholder.style.display = "none";
+  //       placeholder.style.height = "0";
+  //       placeholder.style.visibility = "hidden";
+  //     }, 1); // Duration matches CSS transition
+  //   }
+  // });
+
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > stickyOffset) {
       navbar.classList.add("sticky");
-      placeholder.style.display = "block";
-      setTimeout(() => {
-        placeholder.style.height = `60px`;
-        placeholder.style.visibility = "visible";
-        navbar.style.transform = "translateY(0)"; // Smooth transition
-      }, 50); // Slight delay to smoothen transition
+      placeholder.classList.add("sticky-placeholder");
     } else {
       navbar.classList.remove("sticky");
-      placeholder.style.display = "none";
+      placeholder.classList.add("hidden-placeholder");
       setTimeout(() => {
-        placeholder.style.display = "none";
-        placeholder.style.height = "0";
-        placeholder.style.visibility = "hidden";
-      }, 1); // Duration matches CSS transition
+        placeholder.classList.remove("sticky-placeholder", "hidden-placeholder");
+      }, 1);
     }
   });
+  
 
   //----------------------------------------------------------------------------
 
@@ -80,10 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //----------------------------------------------------------------------------
 
   document.addEventListener("DOMContentLoaded", function () {
-  // Get references to the state and UT select elements
-  const stateSelect = document.getElementById("state-select");
-  const utSelect = document.getElementById("ut-select");
-
+  
   function updateContent(selectElementId, jsonFilePath, updateFunction) {
     const selectElement = document.getElementById(selectElementId);
     selectElement.addEventListener("change", function () {
@@ -102,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
   updateContent("state-select", "./assets/json/states.json", updateStateInfo);
   updateContent("ut-select", "./assets/json/uts.json", updateUTInfo);
   
-
   // Function to fetch JSON data from a given URL
   function fetchData(url) {
     return fetch(url).then((response) => response.json());
@@ -140,42 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ut-wiki-link").href = data[ut].wiki_link;
     document.getElementById("ut-official-link").href = data[ut].official_link;
   }
-
-  // Event listener for when a state is selected from the dropdown
-  // stateSelect.addEventListener("change", function () {
-  //   fetchData("./assets/json/states.json")
-  //     .then((stateData) => {
-  //       updateStateInfo(stateData, this.value);
-  //     })
-  //     .catch((error) => console.error("Error loading state data:", error));
-  // });
-
-  // // Event listener for when a UT is selected from the dropdown
-  // utSelect.addEventListener("change", function () {
-  //   fetchData("./assets/json/uts.json")
-  //     .then((utData) => {
-  //       updateUTInfo(utData, this.value);
-  //     })
-  //     .catch((error) => console.error("Error loading UT data:", error));
-  // });
-
-  // Initialize the content with the selected region (Maharashtra by default)
-  // fetchData("./assets/json/states.json")
-  //   .then((stateData) => {
-  //     updateStateInfo(stateData, stateSelect.value);
-  //   })
-  //   .catch((error) =>
-  //     console.error("Error loading default state data:", error)
-  //   );
-
-  // // Initialize the content with the selected region (Delhi by default)
-  // fetchData("./assets/json/uts.json")
-  //   .then((utData) => {
-  //     updateUTInfo(utData, utSelect.value);
-  //   })
-  //   .catch((error) =>
-  //     console.error("Error loading default state data:", error)
-  //   );
   });
 
   //----------------------------------------------------------------------------
